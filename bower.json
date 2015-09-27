@@ -1,0 +1,31 @@
+{
+  "name": "Tincho",
+  "version": "1.0.0",
+  "authors": [
+    "Martin Di Palma"
+  ],
+  "description": "Tincho web",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "tincho"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "riot": "~2.2.4",
+    "material-design-lite": "~1.0.4"
+  }
+}
