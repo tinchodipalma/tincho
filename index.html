@@ -2,9 +2,19 @@
 <html lang="es">
     <head>
         <title>Tincho</title>
-        <link type="text/css" rel="stylesheet" href="./dist/css/tincho.css">
+        <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="/dist/css/tincho.css">
     </head>
     <body>
-        <h1>First step :)</h1>
+        <tincho-content></tincho-content>
+
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/bower_components/riot/riot+compiler.min.js"></script>
+        <script type="riot/tag" src="/app/tags/tincho-content.tag"></script>
+        <script type="riot/tag" src="/app/tags/tincho-about-me.tag"></script>
+        <script>
+            riot.mount('tincho-content');
+        </script>
     </body>
 </html>

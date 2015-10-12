@@ -18,7 +18,7 @@ gulp.task('lint', function() {
 
 // Compile Our Sass
 gulp.task('sass', function() {
-    return gulp.src('app/scss/*.scss')
+    return gulp.src(['app/scss/*.scss', '!app/scss/_*.scss'])
         .pipe(concat('tincho.scss'))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('dist/css'))
@@ -38,11 +38,17 @@ gulp.task('html', function () {
         .pipe(connect.reload());
 });
 
+gulp.task('tag', function () {
+    gulp.src('./*.tag')
+        .pipe(connect.reload());
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('app/js/*.js', ['lint', 'scripts']);
     gulp.watch('app/scss/*.scss', ['sass']);
     gulp.watch('*.html', ['html']);
+    gulp.watch('app/tags/*.tag', ['tag']);
 });
 
 // Default Task
