@@ -1,5 +1,5 @@
 <tincho-about-me>
-    <div class="section section-green">
+    <div class="section section-green" data-speed="3">
         <div class="header-group">
             <div class="title title-main">
                 Martin Di Palma
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <div class="section section-gray">
+    <div class="section section-gray" data-speed="8">
         <div class="header-group">
             <div class="title title-main">
                 Martin Di Palma
