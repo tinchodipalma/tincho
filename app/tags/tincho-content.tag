@@ -1,9 +1,6 @@
 <tincho-content>
-    <div id="content">
-        <tincho-about-me></tincho-about-me>
-        <tincho-education></tincho-education>
-        <tincho-experience></tincho-experience>
-    </div>
+    <div id="menu"></div>
+    <div id="content"></div>
 
     <script>
         var self = this
@@ -11,6 +8,9 @@
 
         riot.route(function (hash, tag, id) {
             riot.mount('#content', 'tincho-' + tag)
+            if (!!self.menuTag) {
+                self.menuTag.updateTag(tag)
+            }
         })
 
         riot.route.exec(function (hash, tag, id) {
@@ -21,7 +21,8 @@
         })
 
         self.on('mount', function() {
-            // riot.mount('#content', 'tincho-' + self.tag)
+            self.menuTag = riot.mount('#menu', 'tincho-menu')[0]
+            self.contentTag = riot.mount('#content', 'tincho-' + self.tag)[0]
         })
 
     </script>

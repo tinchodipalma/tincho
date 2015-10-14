@@ -1,5 +1,5 @@
 <tincho-about-me>
-    <div class="section section-green section-triangles" data-speed="0.99">
+    <div class="section section-green">
         <div class="header-group">
             <div class="title title-main">
                 Martin Di Palma

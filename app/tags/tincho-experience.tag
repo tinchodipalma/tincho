@@ -1,5 +1,5 @@
 <tincho-experience>
-    <div class="section section-white section-squares jarallax" data-speed="0.1">
+    <div class="section section-blue">
         <div class="header-group">
             <div class="title title-main">
                 Experiencia Laboral

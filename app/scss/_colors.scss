@@ -1,26 +1,27 @@
 $bg-color: #FCFCFC;
 
+/// COLORS ///
+$lightblue: #77CAFF;
+$blue: #3D3DAA;
+$green: #3DAA3D;
+$orange: #AA6634;
+$gray: #D4D4D4;
+$white: #FAFAFA;
+$black: #202020;
+
 $header-group-border: #FFF;
+
+$menu-background-color: #FAFAFA;
+$menu-option-text-color: #333;
 
 $section-border-color: rgba(90, 90, 90, 0.3);
 
-$section-backgrounds: (
-    'triangles-full': 'triangles-full2.png',
-    'grass': 'grass.png',
-    'rombos': 'rombos.png',
-    'triangles': 'triangles.png',
-    'squares': 'squares.png',
-    'blocks': 'blocks.png',
-    'blocks-full': 'blocks.jpg',
-    'texture': 'texture.png',
-);
-
-$section-colors: (
-    'lightblue': #77CAFF,
-    'blue': #3D3DAA,
-    'green': #3DAA3D,
-    'orange': #AA6634,
-    'gray': #D4D4D4,
-    'white': #FAFAFA,
-    'black': #202020
+$colors: (
+    'lightblue': $lightblue,
+    'blue': $blue,
+    'green': $green,
+    'orange': $orange,
+    'gray': $gray,
+    'white': $white,
+    'black': $black,
 );

@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'fonts';
+@import 'extras';
 
 body {
     background: $bg-color;
@@ -9,50 +10,91 @@ body {
     width: 100%;
 }
 
-.section {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    padding: 20px 5%;
-    border-bottom: 1px solid $section-border-color;
-    background-position: bottom;
-    background-repeat: repeat-x;
-    background-size: 100%;
-    z-index: 1;
+#menu {
+    height: $menu-height;
+    background: $menu-background-color;
+    z-index: 10;
 
-    .header-group {
-        width: 100%;
-        text-align: center;
+    #menuList {
+        z-index: 10;
+    }
 
-        .title {
-            font-size: $header-title-size;
-            font-weight: bold;
-        }
+    ul {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        list-style: none;
+        height: $menu-height;
 
-        .title-main {
-            margin: 10vh auto;
-            font-size: $header-title-main-size;
-            color: $header-title-main-color;
+        li {
+            display: inline-block;
+            list-style: none;
+            padding: ($menu-height / 4) 20px 0;
+            margin: 0;
+            color: $menu-option-text-color;
+            vertical-align: top;
+            transition: padding ease-in-out 0.5s,
+            border ease-in-out 0.5s,
+            height ease-in-out 0.5s;
+
+            &.active {
+                height: ($menu-height * 1.5);
+                color: $white;
+                padding-top: ($menu-height / 2);
+
+                @each $color-key, $color-value in $colors {
+                    &.#{$color-key} {
+                        border-color: $color-value;
+                        background-color: $color-value;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-weight: bold;
+            }
         }
     }
 
-    @each $bg-key, $bg-value in $section-backgrounds {
-        &.section-#{$bg-key} {
-            background-image: url('../../app/img/' + $bg-value );
-        }
-    }
-
-    @each $color-key, $color-value in $section-colors {
-        &.section-#{$color-key} {
-            background-color: $color-value;
-            border-color: $color-value;
-        }
-    }
 }
 
-.jarallax {
-    position: relative;
-    background-size: cover;
-    background-repeat: repeat-x;
-    background-position: 30% 30%;
+#content {
+    min-height: $content-height;
+    z-index: 1;
+
+    .section {
+        position: relative;
+        min-height: 100%;
+        width: 100%;
+        padding: 20px 5%;
+        border-top: 3px solid $section-border-color;
+        background-position: bottom;
+        background-repeat: repeat-x;
+        background-size: 100%;
+        z-index: 1;
+
+        .header-group {
+            width: 100%;
+            text-align: center;
+
+            .title {
+                font-size: $header-title-size;
+                font-weight: bold;
+            }
+
+            .title-main {
+                margin: 10vh auto;
+                font-size: $header-title-main-size;
+                color: $header-title-main-color;
+            }
+        }
+
+        @each $color-key, $color-value in $colors {
+            &.section-#{$color-key} {
+                border-color: $color-value;
+            }
+        }
+    }
 }

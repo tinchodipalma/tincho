@@ -1,5 +1,5 @@
 <tincho-education>
-    <div class="section section-gray section-rombos jarallax" data-speed="0.1">
+    <div class="section section-orange">
         <div class="header-group">
             <div class="title title-main">
                 Educaci&oacute;n
