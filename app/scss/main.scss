@@ -33,14 +33,13 @@ body {
             margin: 0;
             color: $menu-option-text-color;
             vertical-align: top;
-            transition: padding ease-in-out 0.5s,
-            border ease-in-out 0.5s,
-            height ease-in-out 0.5s;
+            transition: padding ease-in-out 0.2s,
+                background linear 0.5s,
+                color ease-in-out 0.5s;
 
             &.active {
-                height: ($menu-height * 1.5);
                 color: $white;
-                padding-top: ($menu-height / 2);
+                padding: ($menu-height / 2) 20px;
 
                 @each $color-key, $color-value in $colors {
                     &.#{$color-key} {

@@ -21,7 +21,7 @@
         })
 
         self.on('mount', function() {
-            self.menuTag = riot.mount('#menu', 'tincho-menu')[0]
+            self.menuTag = riot.mount('#menu', 'tincho-menu', { parent: self })[0]
             self.contentTag = riot.mount('#content', 'tincho-' + self.tag)[0]
         })
 

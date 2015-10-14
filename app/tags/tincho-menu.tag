@@ -11,7 +11,6 @@
 
     <script>
         var self = this
-        self.tag = 'about-me'
 
         self.links = [
             {
@@ -43,6 +42,11 @@
             self.tag = tag
             self.update()
         }
+
+        self.on('mount', function() {
+            self.tag = opts.parent.tag
+            self.update()
+        })
 
     </script>
 </tincho-menu>
