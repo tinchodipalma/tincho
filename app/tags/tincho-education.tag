@@ -1,8 +1,8 @@
-<tincho-about-me>
-    <div class="section section-green section-triangles" data-speed="0.99">
+<tincho-education>
+    <div class="section section-gray section-rombos jarallax" data-speed="0.1">
         <div class="header-group">
             <div class="title title-main">
-                Martin Di Palma
+                Educaci&oacute;n
             </div>
             <div class="subtitle">
                 <p>
@@ -17,4 +17,4 @@
             </div>
         </div>
     </div>
-</tincho-about-me>
+</tincho-education>

@@ -1,5 +1,9 @@
 <tincho-content>
-    <div id="content"></div>
+    <div id="content">
+        <tincho-about-me></tincho-about-me>
+        <tincho-education></tincho-education>
+        <tincho-experience></tincho-experience>
+    </div>
 
     <script>
         var self = this
@@ -17,7 +21,7 @@
         })
 
         self.on('mount', function() {
-            riot.mount('#content', 'tincho-' + self.tag)
+            // riot.mount('#content', 'tincho-' + self.tag)
         })
 
     </script>

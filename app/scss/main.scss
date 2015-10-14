@@ -14,8 +14,10 @@ body {
     height: 100vh;
     width: 100%;
     padding: 20px 5%;
-    border-bottom: 1vh solid $section-border-color;
-    background: transparent url('../../app/img/triangles.png') repeat-x bottom;
+    border-bottom: 1px solid $section-border-color;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 100%;
     z-index: 1;
 
     .header-group {
@@ -31,6 +33,12 @@ body {
             margin: 10vh auto;
             font-size: $header-title-main-size;
             color: $header-title-main-color;
+        }
+    }
+
+    @each $bg-key, $bg-value in $section-backgrounds {
+        &.section-#{$bg-key} {
+            background-image: url('../../app/img/' + $bg-value );
         }
     }
 
