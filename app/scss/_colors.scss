@@ -4,15 +4,16 @@ $bg-color: #FCFCFC;
 $lightblue: #77CAFF;
 $blue: #3D3DAA;
 $green: #3DAA3D;
-$orange: #AA6634;
+$orange: #FF6634;
 $gray: #D4D4D4;
+$darkgray: #444;
 $white: #FAFAFA;
 $black: #202020;
 
 $header-group-border: #FFF;
 
-$menu-background-color: #FAFAFA;
-$menu-option-text-color: #333;
+$menu-background-color: $black;
+$menu-option-text-color: $white;
 
 $section-border-color: rgba(90, 90, 90, 0.3);
 
