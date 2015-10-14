@@ -27,5 +27,8 @@
     "bootstrap": "~3.3.5",
     "riot": "~2.2.4",
     "material-design-lite": "~1.0.4"
+  },
+  "devDependencies": {
+    "jarallax": "~1.2.0"
   }
 }
