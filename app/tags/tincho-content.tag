@@ -13,10 +13,11 @@
         riot.route(function (hash, tag, id) {
             // http://tympanus.net/Development/PageTransitions/ <- Page Transitions!!
             // Mount previous page before changing tag
-            
+
             var pageIn = self.isFirstPage ? 2 : 1
             var pageOut = self.isFirstPage ? 1 : 2
-            //debugger
+
+            $(window).trigger('riotroute')
             riot.mount('#page' + pageOut, 'tincho-' + self.tag)
             self.tag = tag
             riot.mount('#page' + pageIn, 'tincho-' + tag)

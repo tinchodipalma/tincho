@@ -34,17 +34,7 @@ var PageTransitions = (function() {
 
 		$pages.eq( current ).addClass( 'pt-page-current' );
 
-        /*
-		$( '#dl-menu' ).dlmenu( {
-			animationClasses : { in : 'dl-animate-in-2', out : 'dl-animate-out-2' },
-			onLinkClick : function( el, ev ) {
-				ev.preventDefault();
-				nextPage( el.data( 'animation' ) );
-			}
-		} );
-        */
-
-		$iterate.on( 'click', function() {
+		$(window).on( 'riotroute', function() {
 			if( isAnimating ) {
 				return false;
 			}
@@ -362,7 +352,10 @@ var PageTransitions = (function() {
 		}
 
         outClass = 'pt-page-fade pt-page-ontop';
-        inClass = 'pt-page-moveFromTop';
+        inClass = 'pt-page-scaleUpDown';
+
+        $main.css('overflow', 'hidden');
+        $('#menuBlock').removeClass('hide');
 
 		$currPage.addClass( outClass ).on( animEndEventName, function() {
 			$currPage.off( animEndEventName );
@@ -387,6 +380,9 @@ var PageTransitions = (function() {
 	}
 
 	function onEndAnimation( $outpage, $inpage ) {
+        $main.css('overflow', 'auto');
+        $('#menuBlock').addClass('hide');
+
 		endCurrPage = false;
 		endNextPage = false;
 		resetPage( $outpage, $inpage );

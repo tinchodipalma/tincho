@@ -7,6 +7,7 @@
                 </a>
             </li>
         </ul>
+        <div id="menuBlock" class="hide"></div>
     </div>
 
     <script>

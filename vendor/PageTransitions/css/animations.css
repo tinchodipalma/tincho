@@ -28,8 +28,8 @@
 }
 
 .pt-page-moveFromTop {
-	-webkit-animation: moveFromTop .4s ease both;
-	animation: moveFromTop .4s ease both;
+	-webkit-animation: moveFromTop .2s ease both;
+	animation: moveFromTop .2s ease both;
 }
 
 .pt-page-moveToBottom {
