@@ -2,9 +2,14 @@
 @import 'fonts';
 @import 'extras';
 
+* {
+    border-radius: 0 !important;
+}
+
 body {
     background: $bg-color;
     padding: 0;
+    padding-top: $menu-height;
     margin: 0;
     position: absolute;
     width: 100%;
@@ -14,6 +19,9 @@ body {
     height: $menu-height;
     background: $menu-background-color;
     z-index: 10;
+    border: 0;
+    margin: 0;
+    padding: 0;
 
     #menuList {
         z-index: 10;
@@ -48,6 +56,12 @@ body {
                 display: block;
                 padding: ($menu-height / 4) 0 0;
                 transition: padding ease-in-out 0.2s;
+
+                &::after {
+                    content: "";
+                    top: 0;
+                    transition: top ease-in 0.1s 0.1s;
+                }
             }
 
             &.active {
@@ -97,6 +111,10 @@ body {
     min-height: $content-height;
     z-index: 1;
 
+    .pt-page {
+        background-color: white;
+    }
+
     .section {
         position: relative;
         min-height: 100%;
@@ -127,6 +145,12 @@ body {
         @each $color-key, $color-value in $colors {
             &.section-#{$color-key} {
                 border-color: $color-value;
+
+                .header-group {
+                    .title-main {
+                        color: $color-value;
+                    }
+                }
             }
         }
     }

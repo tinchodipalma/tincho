@@ -1,7 +1,7 @@
 <tincho-menu>
     <div id="menuList" class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8">
         <ul>
-            <li each={ links } class="{ color } { 'active': isActive(tag) }">
+            <li each={ links } class="menu-item { color } { 'active': isActive(tag) }">
                 <a href={ getMenuLink(tag) }>
                     <span>{ text }</span>
                 </a>
