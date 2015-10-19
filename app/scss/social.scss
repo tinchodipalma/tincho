@@ -1,0 +1,29 @@
+// SCSS for tincho-social-networks
+#socialNetworksList {
+    margin-top: 50px;
+
+    .social-network-option {
+        border-bottom: 5px solid $gray;
+
+        a {
+            display: block;
+            background: transparent;
+            padding-top: 16px;
+            max-height: 64px;
+            overflow: hidden;
+            transition: transform .4s ease-in,
+                padding .4s linear;
+
+            &:hover,
+            &:focus {
+                padding-top: 0;
+                transform: scale(1.2) rotateZ(-30deg);
+            }
+
+            img {
+                width: 100%;
+                max-width: 64px;
+            }
+        }
+    }
+}

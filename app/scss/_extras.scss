@@ -2,3 +2,13 @@ $menu-height: 50px;
 $menu-option-width: 120px;
 
 $content-height: calc(100vh - #{$menu-height});
+
+$backgrounds: (
+    'triangles': 'triangles.png',
+    'blocks': 'blocks.png',
+    'grass': 'grass.png',
+    'triangles-full': 'triangles-full.png',
+    'texture': 'texture.png',
+    'squares': 'squares.png',
+    'rombos': 'rombos.png',
+);

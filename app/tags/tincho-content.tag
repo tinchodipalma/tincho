@@ -1,5 +1,5 @@
 <tincho-content>
-    <div id="menu" class="navbar navbar-default navbar-fixed-top"></div>
+    <div id="menuTag"></div>
     <div id="content" class="pt-perspective">
         <div id="page1" class="pt-page pt-page-1"></div>
         <div id="page2" class="pt-page pt-page-2"></div>
@@ -18,6 +18,11 @@
             var pageOut = self.isFirstPage ? 1 : 2
 
             $(window).trigger('riotroute')
+
+            if (!!window.navigator && !!window.navigator.vibrate) {
+                window.navigator.vibrate(3000)
+            }
+
             riot.mount('#page' + pageOut, 'tincho-' + self.tag)
             self.tag = tag
             riot.mount('#page' + pageIn, 'tincho-' + tag)
@@ -39,7 +44,7 @@
 
         self.on('mount', function() {
             self.isFirstPage = true
-            self.menuTag = riot.mount('#menu', 'tincho-menu', { parent: self })[0]
+            self.menuTag = riot.mount('#menuTag', 'tincho-menu', { parent: self })[0]
             self.contentTag = riot.mount('#page1', 'tincho-' + self.tag)[0]
 
             PageTransitions.init()

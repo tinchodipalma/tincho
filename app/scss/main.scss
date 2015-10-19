@@ -13,110 +13,17 @@ body {
     margin: 0;
     position: absolute;
     width: 100%;
-}
 
-#menu {
-    height: $menu-height;
-    background: $menu-background-color;
-    z-index: 10;
-    border: 0;
-    margin: 0;
-    padding: 0;
-
-    #menuList {
-        z-index: 10;
-    }
-
-    #menuBlock {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: $menu-height;
-        width: 100%;
-        background: transparent;
-        z-index: 11;
-        cursor: progress;
-    }
-
-    ul {
+    .ul-reset {
         padding: 0;
         margin: 0;
-        display: inline-block;
+        background: transparent;
         list-style: none;
-        height: $menu-height;
 
         li {
-            display: inline-block;
-            width: $menu-option-width;
-            text-align: center;
             list-style: none;
-            padding: 0;
-            margin: 0;
-            color: $menu-option-text-color;
-            vertical-align: top;
-            transition: padding ease-in-out 0.2s,
-                background linear 0.05s,
-                color ease-in-out 0.3s;
-
-            a {
-                text-decoration: none;
-                color: inherit;
-                font-weight: bold;
-                width: 100%;
-                min-height: $menu-height;
-                display: block;
-                padding: ($menu-height / 4) 0 0;
-                transition: padding ease-in-out 0.2s;
-
-                &::after {
-                    content: "";
-                    top: 0;
-                    transition: top ease-in 0.1s 0.1s;
-                }
-            }
-
-            &.active {
-                color: $white;
-
-                a {
-                    z-index: 50;
-                    padding: ($menu-height / 2) 0 0;
-
-                    span {
-                      position: relative;
-                      display: block;
-                      margin-bottom: 5px;
-                    }
-
-                    &::after {
-                        position: relative;
-                        display: block;
-                        top: 14.9px;
-                        content: "";
-                        width: 0;
-                        height: 0;
-                        border-style: solid;
-                        border-width: 15px 0 0 $menu-option-width;
-                    }
-                }
-
-                @each $color-key, $color-value in $colors {
-                    &.#{$color-key} {
-                        border-color: $color-value;
-                        background-color: $color-value;
-
-                        a::after {
-                            border-color: $color-value transparent transparent transparent;
-                        }
-                    }
-
-                }
-
-            }
         }
     }
-
 }
 
 #content {
@@ -124,19 +31,21 @@ body {
     z-index: 1;
 
     .pt-page {
-        background-color: white;
+        background-color: $white;
+        overflow: auto;
     }
 
     .section {
         position: relative;
-        min-height: 100%;
+        min-height: calc(100vh - #{$menu-height});
         width: 100%;
         padding: 20px 5%;
-        border-top: 5px solid $section-border-color;
+        border-top: 0 solid $section-border-color;
         background-position: bottom;
         background-repeat: repeat-x;
         background-size: 100%;
         z-index: 1;
+        overflow: auto;
 
         .header-group {
             width: 100%;
@@ -163,6 +72,13 @@ body {
                         color: $color-value;
                     }
                 }
+            }
+        }
+
+        @each $bg-key, $bg-value in $backgrounds {
+            &.section-bg-#{$bg-key} {
+                background: url('../../app/img/' + $bg-value) transparent bottom repeat-x;
+                background-size: cover;
             }
         }
     }
