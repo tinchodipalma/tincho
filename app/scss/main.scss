@@ -43,9 +43,13 @@ body {
         border-top: 0 solid $section-border-color;
         background-position: bottom;
         background-repeat: repeat-x;
-        background-size: 100%;
+        background-size: cover;
         z-index: 1;
-        overflow: auto;
+        overflow: hidden;
+
+        &.section-bg-animated::before {
+            animation: animatedBackground 10s ease infinite;
+        }
 
         .header-group {
             width: 100%;
@@ -76,9 +80,20 @@ body {
         }
 
         @each $bg-key, $bg-value in $backgrounds {
-            &.section-bg-#{$bg-key} {
+            &.section-bg-#{$bg-key}::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: block;
                 background: url('../../app/img/' + $bg-value) transparent bottom repeat-x;
                 background-size: cover;
+                z-index: 0;
+                overflow: hidden;
+                max-width: 100%;
+                max-height: 100%;
             }
         }
     }

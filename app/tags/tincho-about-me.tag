@@ -1,5 +1,5 @@
 <tincho-about-me>
-    <div class="section section-green section-bg-triangles">
+    <div class="section section-green section-bg-triangles section-bg-animated">
         <div class="header-group">
             <div class="title title-main">
                 Martin Di Palma

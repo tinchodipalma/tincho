@@ -1,5 +1,5 @@
 <tincho-education>
-    <div class="section section-orange">
+    <div class="section section-orange section-bg-squares section-bg-animated">
         <div class="header-group">
             <div class="title title-main">
                 Educaci&oacute;n
