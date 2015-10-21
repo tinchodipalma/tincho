@@ -20,7 +20,7 @@
             $(window).trigger('riotroute')
 
             if (!!window.navigator && !!window.navigator.vibrate) {
-                window.navigator.vibrate(3000)
+                window.navigator.vibrate(100)
             }
 
             riot.mount('#page' + pageOut, 'tincho-' + self.tag)
