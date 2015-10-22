@@ -1,0 +1,39 @@
+// SCSS for Tincho-experience tag
+
+#experience {
+    .experience-section {
+        .experience-header {
+            font-size: $header-section-content;
+            color: tincho-section-color('experience');
+        }
+
+        .experience-content {
+            margin-bottom: 4vw;
+
+            li {
+                margin: 20px 0 0 30px;
+            }
+
+            .experience-image {
+                img {
+                    width: 100%;
+                    max-height: 200px;
+                }
+            }
+
+            .experience-title {
+                @include tincho-font(1.5vw, bold);
+            }
+
+            .experience-company {
+                font-weight: bold;
+                color: darken(tincho-section-color('experience'), 20%);
+                font-size: 1.2vw;
+
+                .experience-period {
+                    color: darken(tincho-section-color('experience'), 50%);
+                }
+            }
+        }
+    }
+}
