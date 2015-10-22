@@ -1,0 +1,41 @@
+// SCSS for Tincho-Education tag
+
+#education {
+    .education-section {
+        .education-header {
+            font-size: $header-section-content;
+            color: tincho-section-color('education');
+        }
+
+        .education-content {
+            margin-bottom: 4vw;
+
+            li {
+                margin: 20px 0 0 30px;
+            }
+            .education-title {
+                @include tincho-font(1.5vw, bold);
+
+                &::before {
+                    content: "\e080";
+                    font-family: "Glyphicons Halflings";
+                    font-size: 1.2vw;
+                    color: tincho-section-color('education');
+
+                    animation: transformItem 2s ease infinite;
+                }
+            }
+
+            .education-institute {
+                padding-left: 1.65vw;
+                font-weight: bold;
+                color: darken(tincho-section-color('education'), 20%);
+                font-size: 1.2vw;
+
+                .education-period {
+                    color: darken(tincho-section-color('education'), 50%);
+                }
+            }
+        }
+    }
+}

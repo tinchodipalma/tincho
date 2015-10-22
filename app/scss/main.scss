@@ -1,6 +1,7 @@
 @import 'colors';
 @import 'fonts';
 @import 'extras';
+@import 'animations';
 
 * {
     border-radius: 0 !important;
@@ -61,7 +62,7 @@ body {
             }
 
             .title-main {
-                margin: 10vh auto;
+                margin: 10vh auto 5vh;
                 font-size: $header-title-main-size;
                 color: $header-title-main-color;
             }

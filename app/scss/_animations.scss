@@ -1,0 +1,28 @@
+// SCSS for Animations
+
+@keyframes animatedBackground {
+	0% {
+        @include transform(scale(1.0));
+    }
+	50%, 60% {
+        @include transform(scale(1.05));
+    }
+    60%, 100% {
+        @include transform(scale(1.0));
+    }
+}
+
+@keyframes transformItem {
+    0% {
+        @include transform(rotateX(0));
+        opacity: 1;
+    }
+    50%, 60% {
+        @include transform(rotateX(360deg));
+        opacity: 0.5;
+    }
+    90%, 100% {
+        @include transform(rotateX(0));
+        opacity: 1;
+    }
+}

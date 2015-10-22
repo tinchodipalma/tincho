@@ -29,6 +29,7 @@
     "material-design-lite": "~1.0.4"
   },
   "devDependencies": {
-    "jarallax": "~1.2.0"
+    "jarallax": "~1.2.0",
+    "animate.css": "~3.4.0"
   }
 }

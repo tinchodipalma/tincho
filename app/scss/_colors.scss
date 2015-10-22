@@ -26,3 +26,18 @@ $colors: (
     'white': $white,
     'black': $black,
 );
+
+$colors-for-section: (
+    'about-me': $green,
+    'education': $orange,
+    'experience': $blue,
+);
+
+@function tincho-color($color) {
+  @return map-get($colors, $color)
+}
+
+
+@function tincho-section-color($section) {
+  @return map-get($colors-for-section, $section)
+}

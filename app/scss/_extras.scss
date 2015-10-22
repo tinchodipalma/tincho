@@ -13,14 +13,16 @@ $backgrounds: (
     'rombos': 'rombos.png',
 );
 
-@keyframes animatedBackground {
-	0% {
-        transform: scale(1.0);
-    }
-	50%, 60% {
-        transform: scale(1.05);
-    }
-    60%, 100% {
-        transform: scale(1.0);
-    }
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+            transform: $transforms;
+}
+
+@mixin tincho-font($size: 20px, $weight: normal, $style: normal) {
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
 }
